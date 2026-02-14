@@ -1,0 +1,17 @@
+font-size = 13
+
+# Tab switching (Chrome-like)
+keybind = cmd+option+right=next_tab
+keybind = cmd+option+left=previous_tab
+
+# Tab management
+keybind = cmd+t=new_tab
+keybind = cmd+w=close_surface
+
+# Window splitting
+keybind = cmd+shift+d=new_split:right
+keybind = cmd+shift+j=new_split:down
+
+# Navigate between splits
+keybind = cmd+left=goto_split:previous
+keybind = cmd+right=goto_split:next
