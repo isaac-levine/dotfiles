@@ -18,7 +18,7 @@ cd "$DOTFILES_DIR"
 # Stow each package
 # --adopt will move existing files into the dotfiles repo and replace them with symlinks
 # Remove --adopt if you want stow to fail on conflicts instead
-packages=(nvim ghostty zsh git)
+packages=(nvim ghostty tmux zsh git)
 
 for pkg in "${packages[@]}"; do
   echo "Stowing $pkg..."

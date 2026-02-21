@@ -1,4 +1,9 @@
-font-size = 13
+# Bell: bounce dock icon + badge (macOS defaults)
+# The osascript notification hook in ~/.claude/settings.json handles system notifications
+
+font-size = 8
+window-width = 200
+window-height = 60
 
 # Tab switching (Chrome-like)
 keybind = cmd+option+right=next_tab
@@ -6,12 +11,14 @@ keybind = cmd+option+left=previous_tab
 
 # Tab management
 keybind = cmd+t=new_tab
-keybind = cmd+w=close_surface
+keybind = cmd+w=text:\x02w
 
-# Window splitting
-keybind = cmd+shift+d=new_split:right
-keybind = cmd+shift+j=new_split:down
+# ── tmux splits (prefix \x02 = Ctrl+b) ──
+keybind = cmd+d=text:\x02|
+keybind = cmd+shift+d=text:\x02-
 
-# Navigate between splits
-keybind = cmd+left=goto_split:previous
-keybind = cmd+right=goto_split:next
+# ── tmux pane navigation (prefix + arrow) ──
+keybind = cmd+left=text:\x02\x1b[D
+keybind = cmd+right=text:\x02\x1b[C
+keybind = cmd+up=text:\x02\x1b[A
+keybind = cmd+down=text:\x02\x1b[B
